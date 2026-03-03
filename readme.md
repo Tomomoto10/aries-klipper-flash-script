@@ -81,7 +81,7 @@ INSTALL
 
 -On another device, Open your chosen webUI (Fliudd/Mainsail) via the IP listed in the KIAUH UI during install, it wont have connection to your printer yet. 
 
-	-Copy the example printer.config located in this repo to the printer (Klipper Install)
+	-Copy the printer.cfg located in this repo and replace the defaulkt on on the printer using the web interface (Fluidd/Mainsail) 
 	
 	-Restart Klipper
 	
@@ -93,26 +93,21 @@ INSTALL
 	
 	Windows: 
 
-Change below in your printer.config, replace * with the device name show from command above 
+Change below in your printer.cfg, replace * with the device name show from command above 
 
 	[mcu]
 	serial: /dev/serial/by-id/*
 
-
-
-MACROS
-
-
-Macros in the provided printer.config will provide basic functionality. To gain further control, you will need to add additional macros, you can use the macros provided in *.config 
-
+-You should now have basic functionality of the printer, complete Leveling (Below) and any other optional extra steps to get extra functiality before printing for the first time.
 
 	
 LEVELING (NOT TESTED)
 
--Use the front bed screws to make any adjustments to pre level the bed as best as possible, slightely lower than the rear if possible.
+-Use the front bed screws to make any adjustments to pre level the bed as best as possible, have the front slightely lower than the rear if possible.
 
 -On the Klipper terminal run Z_ENDSTOP_CALIBRATE and follow bed leveling using a piece of paper as per *Klipper Instructions
 Procedure is 0: Rear Stationary screw, 1: Left adjustable screw, 2: Right adjustable screw
+
 
 
 BLTOUCH / PROBES (NOT TESTED)
@@ -126,6 +121,11 @@ BLTOUCH / PROBES (NOT TESTED)
 -Other sensors can be used but are not covered in this guide, see pinout if needed (*.png)
 
 
+MACROS
+
+
+Macros in the provided printer.config will provide basic functionality. To gain further control, you will need to add additional macros, you can use the macros provided in *.cfg 
+
 
 
 LEDS 
@@ -135,7 +135,7 @@ LEDS
 	-Solder the "Data" line from the ARGB led strip to r99 on the N32 mainboard 
 	-Solder 5v and Ground wires from ARGB led strip to LCD connector pins 
 
--Add bellow text to your printer.config
+-The following lines in your printer.cfg adjust the control, adjust as needed for the led color range you want. 
 
 	[neopixel chassis_lights]
 	pin: PA15
