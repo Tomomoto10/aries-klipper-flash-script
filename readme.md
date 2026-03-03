@@ -107,16 +107,15 @@ Macros in the provided printer.config will provide basic functionality. To gain 
 
 
 	
-LEVELING 
+LEVELING (NOT TESTED)
+
+-Use the front bed screws to make any adjustments to pre level the bed as best as possible, slightely lower than the rear if possible.
+
+-On the Klipper terminal run Z_ENDSTOP_CALIBRATE and follow bed leveling using a piece of paper as per *Klipper Instructions
+Procedure is 0: Rear Stationary screw, 1: Left adjustable screw, 2: Right adjustable screw
 
 
-	[bed_screws]
-	screw1: 118, 220
-	screw2: 45, 25
-	screw3: 210, 25 
-
-
-BLTOUCH / PROBES 
+BLTOUCH / PROBES (NOT TESTED)
 
 
 -BL touch or other clones can be plugged directly into the hotend board via the 5 pin socket 
