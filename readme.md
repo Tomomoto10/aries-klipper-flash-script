@@ -159,11 +159,19 @@ UNINSTALL
 
 
 REFERENCES
+
 Couldnt have done without, Original project owner, infinte help on reddit.
-GOOPSIE (Git)
+
+GOOPSIE (Git) OopsieGoopsie (Reddit)
+
 https://github.com/goopsie/aries-klipper-flash-script
 
+https://www.reddit.com/r/VoxelabAries/comments/1lna0p0/got_klipper_flashed_to_my_aries/
+___________________
+
 Bed Leveling Macros and Configs
+
 @LaszloLitaus_2081172 (Printables.com) 
+
 https://www.printables.com/model/881037-voxelab-aries-converter-plates/files
 
