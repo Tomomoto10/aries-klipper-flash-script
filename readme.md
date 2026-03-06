@@ -242,20 +242,24 @@ Hotbed Calibration:
 
 ### **PRINT OPTIMISATION**
 
--To get the best quality prints out of your machine, follow the [Resonance Compensation](https://github.com/Klipper3d/klipper/blob/master/docs/Resonance_Compensation.md) and [Pressure Advance](https://www.klipper3d.org/Pressure_Advance.html#pressure-advance) guides. 
+- To get the best quality prints out of your machine, follow the [Resonance Compensation](https://github.com/Klipper3d/klipper/blob/master/docs/Resonance_Compensation.md) and [Pressure Advance](https://www.klipper3d.org/Pressure_Advance.html#pressure-advance) guides. 
 
--Other guides like [Excluding Objects](https://www.klipper3d.org/Exclude_Object.html#exclude-objects) can add extra controls, find more features and controls under the sidebar of the linked page.  
+- Other guides like [Excluding Objects](https://www.klipper3d.org/Exclude_Object.html#exclude-objects) can add extra controls, find more features and controls under the sidebar of the linked page.  
 
 
 ### **SLICER PROFILE**
 
-- Included in the repo is an ORCA SLICER profile
+- Included in the repo is an ORCA SLICER .3mf project
 
- -Import this into Orca Slicer (File->Import) to add the Aries profile and Print Settings 
+ - Import this into Orca Slicer (File->Open Project)
+ - 
+ - Save the Aries Profile and Print Settings by editing the names and saving each as a 'User Preset'
+ - 
+   -See screenshots in folder for info
 
--Currently only 1 available and tested profile that has basic settings for 0.4mm Nozzle and PLA Filament.
+- Currently only 1 available and tested profile that has basic settings for 0.4mm Nozzle and PLA Filament.
 
--More to come! Submissions welcome! 
+- More to come! Submissions welcome! 
 
 
 ### **BED-PROBES**
@@ -275,7 +279,7 @@ Hotbed Calibration:
 	sensor_pin: ^PB1
 	control_pin: PB0
 
--Follow [BLTouch](https://www.klipper3d.org/BLTouch.html#bl-touch) to set up BL Touch sensor with your printer
+- Follow [BLTouch](https://www.klipper3d.org/BLTouch.html#bl-touch) to set up BL Touch sensor with your printer
 
 > *Other sensors can be used but are WIP and not covered in this guide yet.
  
