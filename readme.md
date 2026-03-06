@@ -31,9 +31,9 @@ Added extra info for config changes, LEDS, MACROS, leveling, slicer profiles and
 
 ## **CONTENTS**
 
-[Pre-Install](#**PRE-INSTALL**)
+[Pre-Install](#PRE-INSTALL)
 
-[Install](#**INSTALL**)
+[Install](#INSTALL)
 
 [Post-Install](#**POST-INSTALL**)
 
