@@ -35,29 +35,29 @@ Added extra info for config changes, LEDS, MACROS, leveling, slicer profiles and
 
 [Install](#INSTALL)
 
-[Post-Install](#**POST-INSTALL**)
+[Post-Install](#POST-INSTALL)
 
-  - [Bed-Leveling](#**BED-LEVELING**)
+  - [Bed-Leveling](#BED-LEVELING)
 
-  - [Loading Filament](#**LOADING-FILAMENT**)
+  - [Loading Filament](#LOADING-FILAMENT)
 
-  - [Print Optimisation](#**PRINT-OPTIMISATION**)
+  - [Print Optimisation](#PRINT-OPTIMISATION)
 
-  - [Slicer Profile](#**SLICER-PROFILE**)
+  - [Slicer Profile](#SLICER-PROFILE)
 
-  - [PID Calibration](#**PID-CALIBRATION**)
+  - [PID Calibration](#PID-CALIBRATION)
 
-  - [Bed Probes](#**BED-PROBES**)
+  - [Bed Probes](#BED-PROBES)
 
-  - [Macros](#**MACROS**)
+  - [Macros](#MACROS)
 
-  - [LEDs](#**LEDS**)
+  - [LEDs](#LEDS)
 
-  - [Fans](#**FANS**)
+  - [Fans](#FANS)
 
-[Uninstall](#**UNINSTALL**)
+[Uninstall](#UNINSTALL)
 
-[Credits and Contributions](#**CREDITS-CONTRIBUTIONS**)
+[Credits and Contributions](#CREDITS-CONTRIBUTIONS)
 
 ### **PRE-INSTALL**
 _________
