@@ -165,25 +165,19 @@ ___________
 
 ### **CALIBRATE-PID**
 
-- On the Web interface (Fluidd/Mainsail) run boh Hotend and Heatbed PID calibration commands in the command terminal to ensure precise heating.
+- On the Web interface (Fluidd/Mainsail) run boh Hotend and Heatbed PID calibrations to ensure precise heating.
 
 Hotend Calibration:
 
-	PID_CALIBRATE HEATER=extruder TARGET=220 #CHANGE TO EXTRUDER TEMP OF FILAMENT TO BE USED
-	SAVE_CONFIG
+ - Run the PID_EXTRUDER Macro, wait till finished and klipper will restart
 
 Hotbed Calibration: 
 
-	PID_CALIBRATE HEATER=heater_bed TARGET=60 #CHANGE TO BED TEMP OF FILAMENT TO BE USED
-
- - Run in the command terminal to save adjustments:
-
- 	SAVE_CONFIG
+ - Run the PID_BED Macro, wait till finished and klipper will restart
 
 
 
 ### **BED-LEVELING**
-
 
 - Use the front bed screws to make any adjustments to pre level the bed as best as possible, have the front slightely lower than the rear if possible.
   *In WebUI Settings, Invert the Z-Axis Controls so that + goes up and - goes down 
@@ -202,15 +196,11 @@ Hotbed Calibration:
 
  >  *adjust z -xis towards the nozzle small amounts at time (0.00 SHOULD be nozzle directly on the bed), I ended up with 0.35 z offset for example
 
- -Run the following in the WebUi command terminal and follow the [Paper Leveling](https://www.klipper3d.org/Bed_Level.html#the-paper-test) procedure:
+ -Run the following Macro in the webUI and follow the [Paper Leveling](https://www.klipper3d.org/Bed_Level.html#the-paper-test) procedure:
 
- 	Z_ENDSTOP_CALIBRATE
+ 	REAR_SCREW_Z_ADJUST
 
- - 'ACCEPT' the changes once satisfied
-
- - Run to save adjustments:
-
- 	SAVE_CONFIG
+ - 'ACCEPT' the changes once satisfied and klipper will restart 
 	
 
 **Adjust Front Screw Z-Heights**
@@ -227,9 +217,7 @@ Hotbed Calibration:
 
  - For the first adjustment of the front screws press 'Adjusted' after adjusting to move to the next. After re-adjusting a second time, press 'ACCEPT' for each.
 
- - Run to save adjustments:
-
- 	SAVE_CONFIG
+ - Klipper will save changes and restart
 
 
 ### **LOADING FILAMENT**
@@ -249,15 +237,17 @@ Hotbed Calibration:
 
 ### **SLICER PROFILE**
 
-- Included in the repo is an ORCA SLICER .3mf project
+- Included in the repo is an ORCA SLICER .3mf project (orca_slicer_profile_xyz.3mf)
+
+- Also has XYZ Calibration Cube for [Print Optimisation](#PRINT-OPTIMISATION)
 
  - Import this into Orca Slicer (File->Open Project)
- - 
+
  - Save the Aries Profile and Print Settings by editing the names and saving each as a 'User Preset'
  - 
    -See screenshots in folder for info
 
-- Currently only 1 available and tested profile that has basic settings for 0.4mm Nozzle and PLA Filament.
+- Currently only 1 available and tested profile that has basic SAFE settings for 0.4mm Nozzle and PLA Filament.
 
 - More to come! Submissions welcome! 
 
