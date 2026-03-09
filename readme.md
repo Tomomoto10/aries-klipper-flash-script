@@ -308,14 +308,14 @@ Hotbed Calibration:
 
 **(UNTESTED)**
 
-- Unused fan PA0 in printer.cfg is: [FAN1](images/PA0_fan_plug.png)on the printer mainboard 
+- Unused fan PA3 in printer.cfg is: [FAN1](images/PA0_fan_plug.png)on the printer mainboard 
 
 - Can be used to add a additional fan to the printer
 
 - Modify printer.cfg as per [Fans](https://www.klipper3d.org/Config_Reference.html?h=fan#fans), to gain control of the fan, eg. when hotend is on:
 	
 	[controller_fan mcu_fan1]
-	pin: PA0
+	pin: PA3
 	max_power: 0.75
 	heater: extruder
 
