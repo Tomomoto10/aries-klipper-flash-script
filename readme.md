@@ -347,6 +347,8 @@ RGB
 
 - Once added you can add the macro into your slicer settings to get audible feedback (start print, end print etc.)
 
+- Use the beeper for fancy sounds, heres some [Configs](https://github.com/majarspeed/Profiles-Gcode-Macros/tree/main/Beeper%20tunes) by @majarspeed with some great tunes!
+  *UNTESTED, as my beeper is ony single tone. Will Update when new Piezo arrives. 
 
 
 ### **UNINSTALL**
@@ -385,9 +387,18 @@ Bed Leveling Macros and Configs.
 
   https://www.printables.com/model/881037-voxelab-aries-converter-plates/files
 
+______________
+
 Beeper Configs 
 
 @ellis3dp
 
  https://ellis3dp.com/Print-Tuning-Guide/articles/useful_macros/beeper.html
 
+____________________
+
+Beeper Tunes 
+
+ @majarspeed
+
+ https://github.com/majarspeed/Profiles-Gcode-Macros/tree/main/Beeper%20tunes
