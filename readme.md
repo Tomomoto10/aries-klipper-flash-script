@@ -55,6 +55,8 @@ Added extra info for config changes, LEDS, MACROS, leveling, slicer profiles and
 
   - [Fans](#FANS)
 
+  - [Beeper](#BEEPER)
+
 [Uninstall](#UNINSTALL)
 
 [Credits and Contributions](#CREDITS-CONTRIBUTIONS)
@@ -121,7 +123,7 @@ __________
 
  - On completion you will recieve a promt to connect your klipper host to the printer
 	
->  *Suggested you unplug the ribbon cable connecting the main board to the screen board as this cant be used anymore. 
+ >  *Suggested you unplug the ribbon cable connecting the main board to the screen board as this cant be used anymore. 
 
  > *Screen can be removed and use KlipperScreen on Raspberry Pi Screen in place of original (Optional)
 	
@@ -141,10 +143,10 @@ __________
 
 **Follow steps below ONLY if your printer isnt automatically found* 
 
-- You may need to update the printer.config with the serial port your printer is
-   using:
+- You may need to update the printer.config with the serial port your printer is using:
 
 On Klipper host, Run in terminal/ssh:
+
 	ls /dev/serial/by-id/* 
 	
 - Change below in your printer.cfg, replace * with the device name show from command above 
@@ -194,7 +196,7 @@ Hotbed Calibration:
 
  - Press REAR_SCREW button in the Macro window to move nozzle over rear screw. 
 
- >  *adjust z -xis towards the nozzle small amounts at time (0.00 SHOULD be nozzle directly on the bed), I ended up with 0.35 z offset for example
+  >  *adjust z -xis towards the nozzle small amounts at time (0.00 SHOULD be nozzle directly on the bed), I ended up with 0.35 z offset for example
 
  -Run the following Macro in the webUI and follow the [Paper Leveling](https://www.klipper3d.org/Bed_Level.html#the-paper-test) procedure:
 
@@ -241,10 +243,10 @@ Hotbed Calibration:
 
 - Also has XYZ Calibration Cube for [Print Optimisation](#PRINT-OPTIMISATION)
 
- - Import this into Orca Slicer (File->Open Project)
+ - Import this into Orca Slicer (File->Open Project
 
- - Save the Aries Profile and Print Settings by editing the names and saving each as a 'User Preset'
- - 
+ - Save the Aries Profile and Print Settings by editing the names and saving each as a 'User Preset', then remove the "Project Preset".
+   
    -See screenshots in folder for info
 
 - Currently only 1 available and tested profile that has basic SAFE settings for 0.4mm Nozzle and PLA Filament.
@@ -284,6 +286,23 @@ Hotbed Calibration:
 
 
 ### **LEDS** 
+
+Hotend LED
+
+- Hotend LED can be set to default OFF, and turned on only when printing.
+
+ - Either during [makemenuconfig](images/makemenuconfig-settings.png) remove the '!PC1' (Highlighted) and leave blank
+
+ - Or if you have already configured with this setting, in printer.cfg change: "[led extruder_led] white_pin:" to !PC1
+ 
+ - You can modify/extend the gcode your printer.cfg to play different tones (r2-d2, example coming)
+
+ - Add the following to your Slicer Start_Gcode to turn on at print start (You could use a custom START_PRINT Gcode instead to streamline this)  
+
+	;start gcode
+	SET_LED LED=extruder_led White=1.0 
+
+RGB
 - You can add additional ARGB leds eg. for chassis lighting 
 
  - See [Wiring Reference](images/wiring_reference.png) for pads on the mainboard.
@@ -308,16 +327,26 @@ Hotbed Calibration:
 
 **(UNTESTED)**
 
-- Unused fan PA3 in printer.cfg is: [FAN1](images/PA0_fan_plug.png)on the printer mainboard 
+- Unused fan PA3 in printer.cfg is: [FAN1] on the printer mainboard
 
-- Can be used to add a additional fan to the printer
+- Can be used to add a additional FAN OR BEEPER to the printer
 
-- Modify printer.cfg as per [Fans](https://www.klipper3d.org/Config_Reference.html?h=fan#fans), to gain control of the fan, eg. when hotend is on:
+- Modify printer.cfg as per [Fans](https://www.klipper3d.org/Config_Reference.html?h=fan#fans)
+
+- To gain control of the fan, eg. when hotend is on:
 	
 	[controller_fan mcu_fan1]
 	pin: PA3
 	max_power: 0.75
 	heater: extruder
+
+### **BEEPER**
+- To add beeper to get feedback from your printer follow [This Guide](https://ellis3dp.com/Print-Tuning-Guide/articles/useful_macros/beeper.html).
+  
+- Change pin to PA3 and and add macro to printer.cfg
+
+- Once added you can add the macro into your slicer settings to get audible feedback (start print, end print etc.)
+
 
 
 ### **UNINSTALL**
@@ -355,4 +384,10 @@ Bed Leveling Macros and Configs.
  @LaszloLitaus_2081172 (Printables.com) 
 
   https://www.printables.com/model/881037-voxelab-aries-converter-plates/files
+
+Beeper Configs 
+
+@ellis3dp
+
+ https://ellis3dp.com/Print-Tuning-Guide/articles/useful_macros/beeper.html
 
